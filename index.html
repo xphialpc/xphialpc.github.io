@@ -4,309 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sophia Loraine Caguitla</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-      background: linear-gradient(135deg, #000000, #1a002e, #2a0055, #8a2be2);
-      color: #fff;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 1.5rem 5%;
-      background: rgba(0, 0, 0, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      transition: all 0.3s ease;
-    }
-
-    nav.scrolled {
-      padding: 1rem 5%;
-      box-shadow: 0 2px 20px rgba(138, 43, 226, 0.1);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #8a2be2;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #8a2be2;
-    }
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 5%;
-    }
-
-    .hero-content {
-      max-width: 1200px;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .hero-text h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-
-    .hero-text h1 span {
-      color: #8a2be2;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-bottom: 2rem;
-      line-height: 1.6;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-    }
-
-    .btn-primary {
-      padding: 0.9rem 2rem;
-      background: #8a2be2;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .btn-primary:hover {
-      background: #9d4edd;
-      transform: translateY(-2px);
-      box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
-    }
-
-    .btn-secondary {
-      padding: 0.9rem 2rem;
-      background: transparent;
-      color: #8a2be2;
-      text-decoration: none;
-      border: 2px solid #8a2be2;
-      border-radius: 5px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .btn-secondary:hover {
-      background: rgba(138, 43, 226, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .hero-image {
-      width: 100%;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    .hero-image img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border-radius: 15px;
-      display: block;
-    }
-
-    .about {
-      padding: 6rem 5%;
-      background: #0a0a0a;
-    }
-
-    .about-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .section-title {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
-
-    .section-subtitle {
-      font-size: 1.1rem;
-      color: #aaa;
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .about-content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .about-text {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #ccc;
-    }
-
-    .about-text p {
-      margin-bottom: 1.5rem;
-    }
-
-    .contact {
-      padding: 6rem 5%;
-      background: #0a0a0a;
-    }
-
-    .contact-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .contact-card {
-      background: #000;
-      padding: 2rem;
-      border-radius: 10px;
-      border: 1px solid #222;
-      transition: all 0.3s ease;
-    }
-
-    .contact-card:hover {
-      border-color: #8a2be2;
-      transform: translateY(-5px);
-    }
-
-    .contact-card h3 {
-      font-size: 1.2rem;
-      color: #8a2be2;
-      margin-bottom: 1rem;
-    }
-
-    .contact-card a {
-      color: #aaa;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    .contact-card:hover a {
-      color: #fff;
-    }
-
-    footer {
-      padding: 2rem 5%;
-      background: #000;
-      text-align: center;
-      border-top: 1px solid #222;
-      color: #666;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .hero-text h1 {
-        font-size: 2.5rem;
-      }
-
-      .hero-buttons {
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .hero-image {
-        order: -1;
-        max-width: 250px;
-      }
-
-      .about-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <nav id="navbar">
-    <div class="nav-container">
-      <div class="logo">SC</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <div class="logo">SLC</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#activities">Activities</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
   </nav>
 
   <section id="home" class="hero">
@@ -315,70 +25,83 @@
         <h1>Hi, I'm <span>Sophia Loraine Caguitla</span></h1>
         <p>A third-year BSIT student at Polytechnic University of the Philippines - Sto. Tomas Campus. Currently learning and exploring web development technologies.</p>
         <div class="hero-buttons">
-          <a href="#contact" class="btn-primary">Get In Touch</a>
-          <a href="#about" class="btn-secondary">Learn More</a>
+          <a href="#about" class="btn btn-secondary">Learn More</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="profile.jpg" alt="Sophia Loraine Caguitla">
+        <img src="images/profile.jpg" alt="Sophia Loraine Caguitla">
       </div>
     </div>
   </section>
 
-  <section id="about" class="about fade-in">
-    <div class="about-container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>I'm Sophia Loraine Caguitla, a third-year Bachelor of Science in Information Technology student at the Polytechnic University of the Philippines - Sto. Tomas Campus.</p>
-          <p>My journey in IT has been driven by curiosity and a genuine interest in understanding how technology shapes our world. I'm currently focused on web development, learning everything from front-end design to back-end functionality. Each project I work on teaches me something new, and I'm excited to see where this path leads.</p>
-        </div>
-      </div>
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-text">
+      <p>I'm Sophia Loraine Caguitla, a third-year Bachelor of Science in Information Technology student at the Polytechnic University of the Philippines - Sto. Tomas Campus.</p>
+      <p>My journey in IT has been driven by curiosity and a genuine interest in understanding how technology shapes our world. I'm currently focused on web development, learning everything from front-end design to back-end functionality. Each project I work on teaches me something new, and I'm excited to see where this path leads.</p>
     </div>
   </section>
 
-  <section id="contact" class="contact fade-in">
-    <div class="contact-container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">I'm open to discussing projects, creative ideas, or collaboration opportunities.</p>
-      <div class="contact-grid">
-        <div class="contact-card">
-          <h3>📧 Email</h3>
-          <a href="mailto:sophialcaguitla@email.com">sophialcaguitla@email.com</a>
+  <section id="activities">
+    <h2 class="section-title">Activities</h2>
+    <p class="section-subtitle">Some of my featured works and projects.</p>
+    <div class="activities-grid">
+      
+      <div class="activity-card">
+        <img src="images/palawan.jpg" alt="Palawan Wonders">
+        <div class="card-content">
+          <h3>Palawan Wonders</h3>
+          <p>A travel-inspired web design showcasing the beauty of Palawan’s natural destinations.</p>
         </div>
-        <div class="contact-card">
-          <h3>📷 Instagram</h3>
-          <a href="https://instagram.com/xphialpc" target="_blank">@xphialpc</a>
+        <div class="overlay">
+          <a href="https://xphialpc.github.io/Palawan/" target="_blank" class="btn">View Project</a>
         </div>
       </div>
+
+      <div class="activity-card">
+        <img src="images/nintendo.jpg" alt="Nintendo Switch">
+        <div class="card-content">
+          <h3>Nintendo Switch</h3>
+          <p>A web concept inspired by the Nintendo Switch interface and design style.</p>
+        </div>
+        <div class="overlay">
+          <a href="https://xphialpc.github.io/nintendoswitch/" target="_blank" class="btn">View Project</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Sophia Loraine Caguitla. All rights reserved.</p>
+    <div>
+      <a href="https://www.facebook.com/SophiaPerezCaguitla" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook"></a>
+      <a href="https://instagram.com/xphialc_" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram"></a>
+      <a href="mailto:sophialorainecaguitla@gmail.com"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg" alt="Gmail"></a>
+      <a href="https://github.com/xphialpc" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub"></a>
+    </div>
+    <p>© 2025 Sophia Loraine Caguitla — All Rights Reserved.</p>
   </footer>
 
   <script>
+    // Scroll effect
     window.addEventListener('scroll', () => {
-      const navbar = document.getElementById('navbar');
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
     });
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', e => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+      anchor.addEventListener('click', e=>{
         e.preventDefault();
         const target = document.querySelector(anchor.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
       });
     });
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -100px 0px' });
-
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
   </script>
+
 </body>
 </html>
